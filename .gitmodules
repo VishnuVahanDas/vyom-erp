@@ -1,0 +1,6 @@
+[submodule "web-dashboard"]
+	path = web-dashboard
+	url = https://github.com/VishnuVahanDas/erp-dashboard.git
+[submodule "sdk"]
+	path = sdk
+	url = https://github.com/VishnuVahanDas/team-sdk.git

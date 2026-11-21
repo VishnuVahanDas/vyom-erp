@@ -1,55 +1,8 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-.kotlin
-
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
-*.iml
-*.ipr
-
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
-.DS_Store
-
-### Google credentials — never commit ###
-service-account*.json
-credentials.json
-tokens/
 .env
+.DS_Store
+.idea/
+.vscode/
+*.iml
 
-### Vendor SDK (proprietary binaries — not committed) ###
-vendor-sdk/
-
-### Device sync state (runtime watermark) ###
-device-sync-state.txt
-
-### Frontend ###
-frontend/node_modules/
-frontend/dist/
+# Vendor SDK samples + manual (proprietary, kept locally only)
+unused/vendor-sdk-samples/

@@ -1,0 +1,15 @@
+# Same line endings on Mac and Windows: LF in the repo and working tree.
+* text=auto eol=lf
+
+# Windows scripts need CRLF.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Binaries.
+*.dll binary
+*.exe binary
+*.jar binary
+*.png binary
+*.jpg binary
+*.pdf binary
