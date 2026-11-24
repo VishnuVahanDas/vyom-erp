@@ -14,8 +14,12 @@ application code of its own. The real code lives in two independent git repos:
 | `unused/`        | (in this repo)                    | Parked code and vendor samples. Not built; don't edit unless asked. |
 
 The two submodules share no code. Their only contract is the **PostgreSQL
-schema**: a schema change in one must stay compatible with the other. Read each
-submodule's `README.md` before working in it.
+schema**: a schema change in one must stay compatible with the other.
+
+Each submodule has its own `AGENTS.md` (conventions, past pitfalls, build and
+check steps) and `README.md`. **Read both before working inside a
+submodule.** Its rules apply there in addition to this file:
+[web-dashboard/AGENTS.md](web-dashboard/AGENTS.md), [sdk/AGENTS.md](sdk/AGENTS.md).
 
 ## Submodule pointer rule (always do this)
 
@@ -96,6 +100,22 @@ not just their hashes.
 - After a branch is merged, it may be deleted from the remote (with approval).
   Check first that it has no unmerged commits:
   `git log --oneline origin/main..origin/<branch>` should print nothing.
+
+## Keep the docs current
+
+Update the docs in the same commit as the change they describe, in whichever
+repo the change lives:
+
+| File | Update when |
+| ---- | ----------- |
+| submodule `README.md` | endpoints, roles, settings (`.env.example`), setup/deploy steps, sync behaviour, database contract |
+| submodule `AGENTS.md` | layout, conventions, commands, and any pitfall learned from a mistake |
+| `vyom-erp/README.md` | a submodule is added, removed or renamed, or how the pieces connect changes |
+| `vyom-erp/AGENTS.md` (this file) | repo-wide workflow or rules change |
+
+A change to the shared tables touches both submodules' READMEs (the "Database
+contract" sections) and must stay consistent between them. When you notice
+a doc that no longer matches the code, fix it.
 
 ## Building and running (summary — see each README)
 

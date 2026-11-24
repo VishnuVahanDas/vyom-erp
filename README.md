@@ -27,3 +27,14 @@ git clone <sdk-url>                                # Windows PC: agent only
 
 Already cloned without submodules: `git submodule update --init`.
 After committing inside a submodule, commit here too to record its new version.
+
+## Contributing
+
+Each repo has an `AGENTS.md` with its conventions and rules for people and AI
+agents ([this repo](AGENTS.md), [web-dashboard](web-dashboard/AGENTS.md),
+[sdk](sdk/AGENTS.md)). In short:
+
+- Push submodule changes to their `main` first, then bump the pointer here
+  (`chore: bump erp-dashboard (...)` / `chore: bump sdk (...)`).
+- Update the README and AGENTS.md in the same commit as the change.
+- Never commit `.env` files, database dumps (`web-dashboard/db/`) or vendor DLLs.
